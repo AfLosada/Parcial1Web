@@ -10,7 +10,8 @@ class Trend extends Component {
     render() {
         return (
             <div>
-                
+                <strong>{this.state.hashtag}</strong>
+                <p>{this.state.teweets}</p>
             </div>
         );
     }

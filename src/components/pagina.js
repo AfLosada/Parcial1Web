@@ -5,6 +5,7 @@ import TrendList from "./trendlist";
 import MenuObj from './menuObj';
 import Tweet from "./tweet";
 import Trend from "./trend";
+import ToFollow from './tofollow';
 
 
 class Pagina extends Component {
@@ -36,13 +37,22 @@ class Pagina extends Component {
         return (
             <div classname="container">
                 <div classname="col-4">
-                    {this.state.menu.map( e => <MenuObj value = {e}/>)}
+                    {this.state.menu.map(e => <MenuObj value={e} />)}
+                    <button className="btn btn-primary"></button>
                 </div>
                 <div classname="col-4">
-                    {this.state.tweets.map( e => <Tweet value = {e}/>)}
+                    {this.state.tweets.map(e => <Tweet value={e} />)}
                 </div>
                 <div classname="col-4">
-                    {this.state.trends.map( e => <Trend value = {e}/>)}
+                    <div classname="row">
+                        {this.state.trends.map(e => <Trend value={e} />)}
+                    </div>
+                    <div classname="row">
+                        {this.state.trends.map(e => <ToFollow value={e} />)}
+                    </div>
+                    <div classname = "row">
+                        Terminos Politica de Privacidad Cookies Informacion de Anuncios Más opciones 2015
+                    </div>
                 </div>
             </div>
         );

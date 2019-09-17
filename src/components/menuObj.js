@@ -13,7 +13,7 @@ class MenuObj extends Component {
 
         return (
             <div>
-                <img src={this.state.image} alt ="hola">{this.state.text}</img>
+                <img src={""+ this.state.image} alt ="hola">{this.state.text}</img>
             </div>
         );
     }
